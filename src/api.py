@@ -16,7 +16,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-with open("model.pkl",'rb') as f:
+with open("src/model.pkl",'rb') as f:
     model=pickle.load(f)
     
 class PredictionRequest(BaseModel):
@@ -37,7 +37,7 @@ def predict(request: PredictionRequest):
     )
     c=time.time()
     print('trans load start')
-    with open("transformer.pkl","rb") as f:
+    with open("src/transformer.pkl","rb") as f:
         transformer=pickle.load(f)
     print('db load end')
     d=time.time()    
