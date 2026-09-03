@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Energy Load Forecast</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Energy Load Forecast</h1>
+
+        <p>
+            Predict daily PJM electricity demand using historical load data.
+        </p>
+
+        <div class="forecast-box">
+
+            <label for="date">Select Date</label>
+
+            <input type="date" id="date">
+
+            <button onclick="getPrediction()">
+                Predict
+            </button>
+
+            <div id="result"></div>
+
+        </div>
+
+        <div class="details">
+
+            <h2>Project Details</h2>
+
+            <p><strong>Model:</strong> Linear Regression</p>
+
+            <p><strong>Features:</strong> Month, Day, t-1, t-7</p>
+
+            <p><strong>Backend:</strong> Python / FastAPI</p>
+
+            <p><strong>Database:</strong> PostgreSQL / Supabase</p>
+
+            <p><strong>Data:</strong> PJM electricity load</p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
