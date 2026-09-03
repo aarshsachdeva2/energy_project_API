@@ -4,10 +4,7 @@ import pickle
 import pandas as pd
 import time
 from fastapi.middleware.cors import CORSMiddleware
-a=time.time()
-
-b=time.time()
-from db import engine
+from src.db import engine
 
 app=FastAPI()
 
