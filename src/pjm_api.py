@@ -2,7 +2,7 @@ import pandas as pd
 import requests, os
 from dotenv import load_dotenv
 from datetime import datetime,timedelta
-from db import engine
+from src.db import engine
 import json
 
 load_dotenv()
